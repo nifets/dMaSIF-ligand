@@ -2,5 +2,4 @@
 
 This was my submission for the Geometric Deep Learning mini-project assignment.
 
-You may use the jupyter notebook in Google colab. Follow instructions to install Julia kernel on the notebook inside colab.
- 
+You may run the jupyter notebook in Google colab.
