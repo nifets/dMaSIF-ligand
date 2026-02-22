@@ -1,0 +1,11 @@
+┌ Info: Logging to /Users/2648894/Code/dMaSIF-ligand/logs/training_20260222_233208.log
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:42
+┌ Info: Threads: 6 / 6 logical cores
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:43
+┌ Info: Starting fresh training run.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:68
+┌ Debug: Epoch 1: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Error: Training crashed
+│   exception = (UndefVarError(:shuffle, 0x00000000000098d9, Main), Union{Ptr{Nothing}, Base.InterpreterIP}[Ptr{Nothing}(0x00000001094ba747), Ptr{Nothing}(0x000000014e03b27b), Ptr{Nothing}(0x000000014e100033), Ptr{Nothing}(0x000000014e1000e7), Ptr{Nothing}(0x0000000109465ca7), Ptr{Nothing}(0x00000001094656a7), Ptr{Nothing}(0x0000000109464307), Ptr{Nothing}(0x000000010946462f), Ptr{Nothing}(0x0000000109464983), Base.InterpreterIP in top-level CodeInfo for Main at statement 11, Ptr{Nothing}(0x000000010947f33f), Ptr{Nothing}(0x000000010947f03b), Ptr{Nothing}(0x0000000109480297), Ptr{Nothing}(0x000000011ea248df), Ptr{Nothing}(0x000000011e4c2fdb), Ptr{Nothing}(0x000000011eae1dab), Ptr{Nothing}(0x000000011eae2283), Ptr{Nothing}(0x000000011d7ece1f), Ptr{Nothing}(0x000000011dfcabbb), Ptr{Nothing}(0x000000011e5ef6ff), Ptr{Nothing}(0x00000001094a24c3), Ptr{Nothing}(0x00000001094a23b3)])
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:88

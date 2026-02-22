@@ -1,0 +1,8 @@
+┌ Info: Logging to /Users/2648894/Code/dMaSIF-ligand/logs/training_20260222_225042.log
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:42
+┌ Info: Threads: 6 / 6 logical cores
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:43
+┌ Info: Starting fresh training run.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:68
+┌ Debug: Epoch 1: 19 train, 2 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:144

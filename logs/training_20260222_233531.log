@@ -1,0 +1,294 @@
+┌ Info: Logging to /Users/2648894/Code/dMaSIF-ligand/logs/training_20260222_233531.log
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:43
+┌ Info: Threads: 6 / 6 logical cores
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:44
+┌ Info: Starting fresh training run.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/run.jl:69
+┌ Debug: Epoch 1: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 1 | trn=0.7532 | val=0.7024 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.7024)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 2: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 2 | trn=0.7072 | val=0.6954 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.6954)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 3: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 3 | trn=0.672 | val=0.6689 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.6689)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 4: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 4 | trn=0.6456 | val=0.6702 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 5: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 5 | trn=0.6127 | val=0.644 | no_improve=1 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.644)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 6: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 6 | trn=0.5878 | val=0.6498 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 7: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 7 | trn=0.5668 | val=0.6115 | no_improve=1 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.6115)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 8: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 8 | trn=0.5325 | val=0.6023 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.6023)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 9: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 9 | trn=0.5092 | val=0.6001 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.6001)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 10: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 10 | trn=0.502 | val=0.5886 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.5886)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 11: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 11 | trn=0.4853 | val=0.5684 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.5684)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 12: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 12 | trn=0.4762 | val=0.5701 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 13: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 13 | trn=0.4648 | val=0.5249 | no_improve=1 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.5249)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 14: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 14 | trn=0.4567 | val=0.5793 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 15: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 15 | trn=0.441 | val=0.513 | no_improve=1 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.513)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 16: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 16 | trn=0.4429 | val=0.5163 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 17: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 17 | trn=0.4318 | val=0.5468 | no_improve=1 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 18: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 18 | trn=0.4301 | val=0.5349 | no_improve=2 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 19: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 19 | trn=0.4199 | val=0.52 | no_improve=3 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 20: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 20 | trn=0.4053 | val=0.5567 | no_improve=4 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 21: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 21 | trn=0.4202 | val=0.474 | no_improve=5 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.474)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 22: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 22 | trn=0.4111 | val=0.5137 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 23: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 23 | trn=0.3857 | val=0.5189 | no_improve=1 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 24: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 24 | trn=0.3958 | val=0.4936 | no_improve=2 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 25: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 25 | trn=0.3998 | val=0.5058 | no_improve=3 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 26: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 26 | trn=0.3898 | val=0.5222 | no_improve=4 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 27: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 27 | trn=0.3904 | val=0.4688 | no_improve=5 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.4688)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 28: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 28 | trn=0.3864 | val=0.4943 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 29: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 29 | trn=0.3677 | val=0.4827 | no_improve=1 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 30: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 30 | trn=0.3665 | val=0.477 | no_improve=2 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 31: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 31 | trn=0.3622 | val=0.4916 | no_improve=3 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 32: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 32 | trn=0.355 | val=0.4958 | no_improve=4 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 33: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 33 | trn=0.3617 | val=0.4464 | no_improve=5 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.4464)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 34: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 34 | trn=0.3519 | val=0.4272 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Checkpoint saved (val=0.4272)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:190
+┌ Debug: Epoch 35: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 35 | trn=0.3559 | val=0.4382 | no_improve=0 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 36: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 36 | trn=0.3494 | val=0.4803 | no_improve=1 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 37: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 37 | trn=0.3466 | val=0.4422 | no_improve=2 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 38: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 38 | trn=0.34 | val=0.4606 | no_improve=3 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 39: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 39 | trn=0.3562 | val=0.45 | no_improve=4 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 40: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 40 | trn=0.355 | val=0.4593 | no_improve=5 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 41: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 41 | trn=0.3381 | val=0.4297 | no_improve=6 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 42: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 42 | trn=0.3243 | val=0.4813 | no_improve=7 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 43: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 43 | trn=0.32 | val=0.4431 | no_improve=8 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 44: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 44 | trn=0.3349 | val=0.4998 | no_improve=9 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 45: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 45 | trn=0.3292 | val=0.4709 | no_improve=10 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 46: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 46 | trn=0.329 | val=0.4295 | no_improve=11 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 47: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 47 | trn=0.3114 | val=0.4575 | no_improve=12 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 48: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 48 | trn=0.3267 | val=0.4823 | no_improve=13 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 49: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 49 | trn=0.3267 | val=0.4501 | no_improve=14 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 50: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 50 | trn=0.3226 | val=0.4552 | no_improve=15 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 51: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 51 | trn=0.3176 | val=0.4385 | no_improve=16 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 52: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 52 | trn=0.3193 | val=0.4903 | no_improve=17 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 53: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 53 | trn=0.312 | val=0.507 | no_improve=18 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 54: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 54 | trn=0.315 | val=0.5045 | no_improve=19 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 55: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 55 | trn=0.3119 | val=0.4985 | no_improve=20 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 56: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 56 | trn=0.3085 | val=0.4914 | no_improve=21 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 57: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 57 | trn=0.3103 | val=0.4738 | no_improve=22 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 58: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 58 | trn=0.3136 | val=0.4376 | no_improve=23 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 59: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 59 | trn=0.3155 | val=0.4777 | no_improve=24 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 60: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 60 | trn=0.3006 | val=0.5076 | no_improve=25 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 61: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 61 | trn=0.3047 | val=0.4774 | no_improve=26 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 62: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 62 | trn=0.3064 | val=0.4841 | no_improve=27 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 63: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 63 | trn=0.3042 | val=0.4617 | no_improve=28 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Debug: Epoch 64: 54 train, 9 val proteins
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:145
+┌ Info: Epoch 64 | trn=0.3086 | val=0.4862 | no_improve=29 | n_trn=54 n_val=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:183
+┌ Info: Early stopping after 30 epochs without improvement.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/train.jl:202

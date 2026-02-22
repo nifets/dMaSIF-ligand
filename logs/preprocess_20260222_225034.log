@@ -1,0 +1,2728 @@
+┌ Info: Logging to /Users/2648894/Code/dMaSIF-ligand/logs/preprocess_20260222_225034.log
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:39
+┌ Info: Threads: 6 / 6 logical cores
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:40
+┌ Debug: SSL connect: search.rcsb.org:443...
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:584
+┌ Debug: TCP connect: search.rcsb.org:443...
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:519
+┌ Debug: POST /rcsbsearch/v2/query HTTP/1.1
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:24
+┌ Debug: client startwrite
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:25
+┌ Debug: 👁  Start write:⏸    0s search.rcsb.org:443:54018 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:257
+┌ Debug: HTTP.Messages.Request:
+│ """
+│ POST /rcsbsearch/v2/query HTTP/1.1
+│ Content-Type: application/json
+│ Host: search.rcsb.org
+│ Accept: */*
+│ User-Agent: HTTP.jl/1.12.4
+│ Content-Length: 718
+│ Accept-Encoding: gzip
+│ 
+│ {"query":{"nodes":[{"parameters":{"negation":false,"operator":"exact_match","value":"ADP","attribute":"rcsb_nonpolymer_instance_annotation.comp_id"},"service":"text","type":"terminal"},{"parameters":{"operator":"exact_match","value":"X-RAY DIFFRACTION","attribute":"exptl.method"},"service":"text","type":"terminal"},{"parameters":{"operator":"less_or_equal","value":2.5,"attribute":"rcsb_entry_info.resolution_combined"},"service":"text","type":"terminal"},{"parameters":{"operator":"less_or_equal","value":50000.0,"attribute":"rcsb_entry_info.molecular_weight"},"service":"text","type":"terminal"}],"type":"group","logical_operator":"and"},"return_type":"entry","request_options":{"paginate":{"start":0,"rows":500}}}"""
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:29
+┌ Debug: client startread
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:51
+┌ Debug: 👁  Start read: 🔗    0s search.rcsb.org:443:54018 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:281
+┌ Debug: client closewrite
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:46
+┌ Debug: 🗣  Write done: 🔗    0s search.rcsb.org:443:54018 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:269
+┌ Debug: called process()
+│   code = ok
+│   input_size = 2028
+│   output_size = 16384
+│   input_delta = 1324
+│   output_delta = 16384
+└ @ TranscodingStreams /Users/2648894/.julia/packages/TranscodingStreams/O3BYF/src/stream.jl:686
+┌ Debug: called process()
+│   code = end
+│   input_size = 704
+│   output_size = 16384
+│   input_delta = 704
+│   output_delta = 9745
+└ @ TranscodingStreams /Users/2648894/.julia/packages/TranscodingStreams/O3BYF/src/stream.jl:686
+┌ Debug: client closeread
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:60
+┌ Debug: ✉️  Read done: ⏸    0s search.rcsb.org:443:54018 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:310
+┌ Debug: HTTP/1.1 200 OK <= (POST /rcsbsearch/v2/query HTTP/1.1)
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:82
+┌ Debug: HTTP.Messages.Response:
+│ """
+│ HTTP/1.1 200 OK
+│ vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+│ content-encoding: gzip
+│ content-type: application/json
+│ transfer-encoding: chunked
+│ date: Sun, 22 Feb 2026 22:50:37 GMT
+│ strict-transport-security: max-age=16000000; includeSubDomains; preload;
+│ alt-svc: h3=":443";ma=60;
+│ 
+│ {
+│   "query_id" : "c0eb2fdb-9b08-4efd-8c54-a19aee68c7e3",
+│   "result_type" : "entry",
+│   "total_count" : 1700,
+│   "result_set" : [ {
+│     "identifier" : "10BM",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "13PK",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1A9X",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1AM1",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1AMW",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1ATR",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1ATS",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1B4S",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1B62",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1B6S",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1B7T",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1BA0",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1BA1",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1BG0",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1BG2",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1BS1",
+│     "score" : 1.0
+│   }, {
+│     "identifier" : "1BUP",
+│     "score" 
+│ ⋮
+│ 26129-byte body
+│ """
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:83
+┌ Info: Fetched 500 PDB IDs from RCSB
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:111
+┌ Debug: initial #samples 11387
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.94363000248796
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.9835336104730215
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.3787556549582676
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.9548507272025843
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.644237629163072
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.416876391327637
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.2408953408570165
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.09837719009316
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.982590695613391
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.8873724755283037
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 6286
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 6229
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 4474
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 10BM: 4474 surface pts, 1 pos, min_adp_dist=6.35Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 10BM: degenerate labels (n_pos=1, frac=0.0, min_adp_dist=6.35Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [1/500] 10BM — skipped (no ADP or degenerate labels) (37.8s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: 13PK already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1A9X already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1AM1 already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1AMW already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: initial #samples 2964
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.5466039979512605
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5069921172614418
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.866622728542671
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4349676355975447
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1322393811023237
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9283266275699045
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7691785193166423
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6437074986036555
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5478676321863232
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4729988908367129
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2008
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2008
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1491
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1ATR: 1491 surface pts, 0 pos, min_adp_dist=6.94Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1ATR: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=6.94Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [6/500] 1ATR — skipped (no ADP or degenerate labels) (4.6s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2957
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.447774516193643
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.4223687275574086
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.8339745296264014
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.455847958890445
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1886994102507145
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9833946567973986
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.8220489626075225
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6975698409531261
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.594881159431424
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5077357973509564
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1972
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1972
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1487
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1ATS: 1487 surface pts, 0 pos, min_adp_dist=6.65Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1ATS: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=6.65Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [7/500] 1ATS — skipped (no ADP or degenerate labels) (4.5s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: 1B4S already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: initial #samples 2603
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.394654422763561
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.31602626758161
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.6536449589399673
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.2271367698578977
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.9292319427985976
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.7210211745797284
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.5740225483617705
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.4614412656907707
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.3705564042250689
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2975859911411631
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1891
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1891
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1395
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1B62: 1395 surface pts, 0 pos, min_adp_dist=7.11Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1B62: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=7.11Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [9/500] 1B62 — skipped (no ADP or degenerate labels) (3.8s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: 1B6S already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: initial #samples 8249
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.525803691237952
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.4241108157649993
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.7543580940894428
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.3221091692459632
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.0158877940922677
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: 💀  Closed:     eof  60s search.rcsb.org:443:54018 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:292
+┌ Debug: SDF loss iter 6: 1.7851063294633593
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.6075347657006382
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.4682125822866006
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.3599312304239213
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2727234615803982
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5580
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5523
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 4022
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1B7T: 4022 surface pts, 0 pos, min_adp_dist=8.47Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1B7T: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=8.47Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [11/500] 1B7T — skipped (no ADP or degenerate labels) (20.9s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2907
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.677162266717042
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.592009691202301
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.9318058977720334
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4873242178185198
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.176712141681584
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9498252009010235
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7807133282509109
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6543076779755717
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5556595657746248
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4754112505803139
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1995
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1995
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1423
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1BA0: 1423 surface pts, 0 pos, min_adp_dist=6.94Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1BA0: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=6.94Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [12/500] 1BA0 — skipped (no ADP or degenerate labels) (4.5s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2907
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.63405665923165
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5685792219870023
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.900699669021807
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.471123111861947
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1755785142196418
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9617845838824473
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.8017449769372516
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6777909358239538
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5757261965955198
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4996483613159926
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1984
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1984
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1452
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1BA1: 1452 surface pts, 2 pos, min_adp_dist=6.38Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1BA1: degenerate labels (n_pos=2, frac=0.0, min_adp_dist=6.38Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [13/500] 1BA1 — skipped (no ADP or degenerate labels) (4.5s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2817
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.874711949274888
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.817462339804177
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.180461601675957
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.7786400394483897
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.493909015175329
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.275017057043672
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.1223304407822616
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.9985574768868628
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.8982905868126996
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.8191382305211068
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1857
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1856
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1319
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1BG0: 1319 surface pts, 0 pos, min_adp_dist=9.78Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1BG0: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=9.78Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [14/500] 1BG0 — skipped (no ADP or degenerate labels) (4.2s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: 1BG2 already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1BS1 already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: initial #samples 2902
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.638336366436761
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.603191635172134
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.971935364506166
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.5593437182482632
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.2781765788699126
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.070073046962027
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.901277108997442
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.7752994403784639
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.678528188719722
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5995410328612638
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1931
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1931
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1445
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1BUP: 1445 surface pts, 0 pos, min_adp_dist=6.64Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1BUP: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=6.64Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [17/500] 1BUP — skipped (no ADP or degenerate labels) (4.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: 1BYQ already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1C30 already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1C3O already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1CE8 already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1CS0 already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1CZA already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1DAD already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1DAF already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1DAK already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1DAM already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1DJN already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1DJQ already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: 1E19 already preprocessed, skipping.
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:146
+┌ Debug: initial #samples 22663
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.279546658728758
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.381558389319653
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.778930433475173
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.3554534089971604
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.0417104824284613
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.8044285562826294
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.6195839676110335
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.472374926109672
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.352916936198336
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.2532743483888353
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 10173
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 9747
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 6662
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E1R: 6662 surface pts, 0 pos, min_adp_dist=14.05Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1E1R: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=14.05Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [31/500] 1E1R — skipped (no ADP or degenerate labels) (136.8s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 1646
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.432047867379009
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.316436710177924
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.6479871812394
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.2182927640477548
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.9194771074788033
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.7051482039070227
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.5352201834928096
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.4028022681970198
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.3014764169990962
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2143114620891275
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1220
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1220
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 906
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E2D: 906 surface pts, 47 pos, min_adp_dist=1.14Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [32/500] 1E2D — ok, 906 surface pts (4.3s) | total ok=0
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1616
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.4138824680510735
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.3355491979064853
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.7206738526521064
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.297774406426753
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.9920192189014243
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.7649480761656062
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.5954703140283573
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.45991435073331
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.3485578526683037
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2561824192879987
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1208
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1208
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 882
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E2E: 882 surface pts, 41 pos, min_adp_dist=1.07Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [33/500] 1E2E — ok, 882 surface pts (1.8s) | total ok=1
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1642
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.534854303047184
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.455434190240272
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.7614834356247693
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.3014645404474448
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.9995648215912647
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.7901472590045804
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.6335533003964091
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.5111712780899578
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.4164986393415353
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.3348954746033312
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1219
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1219
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 903
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E2F: 903 surface pts, 43 pos, min_adp_dist=1.19Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [34/500] 1E2F — ok, 903 surface pts (1.9s) | total ok=2
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1608
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.558423478035098
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.471520672728174
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.8198097866985106
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.3903873870103225
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.0695649889438688
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.8601967594613553
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.6945921318625021
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.5525411836564422
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.4339606910554443
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.3417492026616245
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1188
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1188
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 885
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E2G: 885 surface pts, 37 pos, min_adp_dist=1.65Å (frac=0.04)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [35/500] 1E2G — ok, 885 surface pts (1.8s) | total ok=3
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 12525
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.550255226149186
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5203477801351557
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.872251185880729
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.437121565660642
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1375253474859295
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.92347277859608
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.763963419769653
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6358741676122157
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5314157495988572
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4459396984448454
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 7944
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 7778
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 5483
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E3M: 5483 surface pts, 40 pos, min_adp_dist=1.21Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [36/500] 1E3M — ok, 5483 surface pts (54.2s) | total ok=4
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 5210
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.951739757489845
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.9498950748651667
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.3171604357688347
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.8916929127653463
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.5864806416504433
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.3581062169141846
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.177725983878095
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.032718585674363
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.9217005463376102
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.8263102522569634
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3174
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3174
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2195
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E4E: 2195 surface pts, 0 pos, min_adp_dist=8.95Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1E4E: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=8.95Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [37/500] 1E4E — skipped (no ADP or degenerate labels) (10.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 25232
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.181440320401697
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.284976820182927
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.6923084162221445
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.269231133049294
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.95932333613919
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.725850260364293
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.5442119395199745
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.4011668379126596
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.2845041807852193
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.1858922328079444
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 11416
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 11045
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 7675
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E79: 7675 surface pts, 0 pos, min_adp_dist=7.83Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1E79: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=7.83Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [38/500] 1E79 — skipped (no ADP or degenerate labels) (188.1s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 1665
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.5352144274456
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.426634170193534
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.775004792910212
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.363068959342039
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.0673474013914563
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.8363465593032386
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.648412278471629
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.5002545542991137
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.3848014828321153
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2910174753280872
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1209
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1209
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 884
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E98: 884 surface pts, 43 pos, min_adp_dist=1.23Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [39/500] 1E98 — ok, 884 surface pts (2.0s) | total ok=5
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1645
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.407626818304132
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.3294021174268127
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.684552578837146
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.268345279850119
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.955617398564869
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.7299449943599647
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.5640739548643934
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.4289827011792258
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.3204196934768526
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2261365509167481
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1234
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1234
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 903
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E99: 903 surface pts, 42 pos, min_adp_dist=1.24Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [40/500] 1E99 — ok, 903 surface pts (1.9s) | total ok=6
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1644
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.545002663477553
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.4013878568081592
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.67812713241564
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.210207475482877
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.8892612452837079
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.6612179828439875
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.4863034673035738
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.3478584864311158
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.2393343705874218
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.1581840277183704
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1250
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1250
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 914
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E9B: 914 surface pts, 47 pos, min_adp_dist=1.28Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [41/500] 1E9B — ok, 914 surface pts (1.9s) | total ok=7
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1660
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.567523492835779
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5092635863658312
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.843025747079263
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4040809316994665
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.06460314137585
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.8089502657007357
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.6138691606373559
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.4645376728199322
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.3564235654506624
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2698110184641151
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1244
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1244
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 899
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E9C: 899 surface pts, 49 pos, min_adp_dist=1.26Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [42/500] 1E9C — ok, 899 surface pts (2.0s) | total ok=8
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1664
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.4001870064739945
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.3241796785137394
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.664406793182837
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.251368674238445
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.9654063543782194
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.7374221265757588
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.5693794745389869
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.4406531583243571
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.3318883142087599
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2379714271199231
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1240
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1240
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 888
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E9D: 888 surface pts, 47 pos, min_adp_dist=0.89Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [43/500] 1E9D — ok, 888 surface pts (2.0s) | total ok=9
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1665
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.491246217021121
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.3998214929271318
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.7455153107422214
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.3269517245583473
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.0471289702546596
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.8487853551600277
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7015603666313204
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.5758590708695548
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.4636996903445825
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.3621619996665326
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1232
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1232
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 928
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E9E: 928 surface pts, 49 pos, min_adp_dist=1.28Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [44/500] 1E9E — ok, 928 surface pts (1.9s) | total ok=10
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1577
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.420104007154148
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.316761389353958
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.6778341125028846
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.2436543441282106
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.9220276477096077
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.691057462907429
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.5250017630993176
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.3973935190736624
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.293552884404292
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2074493316947925
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1189
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1189
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 901
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1E9F: 901 surface pts, 52 pos, min_adp_dist=0.78Å (frac=0.06)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [45/500] 1E9F — ok, 901 surface pts (1.7s) | total ok=11
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 5531
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.980206613963229
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.010985299658982
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.4077982974948386
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.003683836852906
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.7043514521936833
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.475191685392889
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.2983141824472004
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.157001192045174
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.042485129502259
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.9472269875745085
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3170
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3170
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2278
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1EHI: 2278 surface pts, 0 pos, min_adp_dist=12.15Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1EHI: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=12.15Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [46/500] 1EHI — skipped (no ADP or degenerate labels) (11.2s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 1267
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.056778727928326
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 2.9000278337008005
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.2534622615999
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 1.8537795483787025
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.61709463867936
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.4567214570808125
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.3392895260207094
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.2409289887946549
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.150854080928742
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.079509770783151
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1001
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1001
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 744
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1EQM: 744 surface pts, 39 pos, min_adp_dist=0.86Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [47/500] 1EQM — ok, 744 surface pts (1.2s) | total ok=12
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 4178
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.641254764035592
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.6101792301441615
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.9567058589315174
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.513027344038439
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1990817065599533
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9707423783819484
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7861543853903439
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6380085783787062
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5225511320187584
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4316037269993318
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2544
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2544
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1801
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1F48: 1801 surface pts, 0 pos, min_adp_dist=8.27Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1F48: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=8.27Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [48/500] 1F48 — skipped (no ADP or degenerate labels) (7.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 43644
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.480767982769235
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.576863205220527
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.9727386831681195
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.5408907487766
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.2177158790721494
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.9647548019639847
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.7624510226894694
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.5993763037857085
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.4657560168413126
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.355932628196428
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 19659
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 19027
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 12605
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1F52: 12605 surface pts, 16 pos, min_adp_dist=5.99Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [49/500] 1F52 — ok, 12605 surface pts (516.5s) | total ok=13
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2393
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.514887422611498
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.470938068908295
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.8546113245230047
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.47177901360843
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.2076957826243455
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.0098364602146317
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.856816306692604
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.7339042536583076
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6364628768941363
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5580297997176722
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1698
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1698
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1228
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1F9T: 1228 surface pts, 29 pos, min_adp_dist=1.99Å (frac=0.02)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [50/500] 1F9T — ok, 1228 surface pts (3.5s) | total ok=14
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2443
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.541711169872724
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.4922692194888656
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.828159416163052
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.3995564116006345
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1206974529644107
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9312836163578162
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7922065811384895
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.684115004385919
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5960362764270635
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5214687952747392
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1740
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1740
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1259
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1F9U: 1259 surface pts, 34 pos, min_adp_dist=2.28Å (frac=0.03)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [51/500] 1F9U — ok, 1259 surface pts (3.6s) | total ok=15
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2469
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.542919685136951
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.474313403136535
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.8308323061909295
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4178535145711466
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1429635155747464
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9502123295016403
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.8078882295965633
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.7005366360499319
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.618321902406031
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5490987662337696
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1745
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1745
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1269
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1F9V: 1269 surface pts, 95 pos, min_adp_dist=0.25Å (frac=0.07)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [52/500] 1F9V — ok, 1269 surface pts (3.6s) | total ok=16
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 4744
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.7238209093111125
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.6580762801886553
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.004504466478449
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.5962397048847645
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.3128913305698244
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.1097427076549535
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.9616033963079988
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.8429802507625621
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.7466206275228546
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.6669899379705158
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3035
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3035
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2159
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1F9W: 2159 surface pts, 60 pos, min_adp_dist=2.02Å (frac=0.03)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [53/500] 1F9W — ok, 2159 surface pts (8.9s) | total ok=17
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 6088
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.680961826205604
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.6260567505961734
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.9687258316046927
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.5268365425212136
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.214210030231104
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.993499112772895
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.8335706133235432
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.7130450890364572
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.610251870554526
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5231214682818737
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 4154
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 4122
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2942
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1FNN: 2942 surface pts, 0 pos, min_adp_dist=8.26Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1FNN: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=8.26Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [54/500] 1FNN — skipped (no ADP or degenerate labels) (13.2s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 8686
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.00824138305635
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.098518416568617
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.5213946222780317
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.115364715976463
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.809535539108439
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.570288507407568
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.3813749955302774
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.232016572758415
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.1081117055763285
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.0055041115885524
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 4773
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 4773
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3504
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1FP6: 3504 surface pts, 0 pos, min_adp_dist=8.61Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1FP6: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=8.61Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [55/500] 1FP6 — skipped (no ADP or degenerate labels) (22.1s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 9076
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.976761786945769
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.036483139498357
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.451498164391416
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.04542147314221
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.7466690349767493
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.5218564143927282
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.3524503060073365
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.224043588562015
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.1231343728053416
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.0365852009763534
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5029
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5029
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3598
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1FWK: 3598 surface pts, 62 pos, min_adp_dist=1.63Å (frac=0.02)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [56/500] 1FWK — ok, 3598 surface pts (23.9s) | total ok=18
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 1774
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.6425109780525595
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.603215520068793
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.9847522798706856
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.592660005510913
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.3064447865761624
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.0824165778079977
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.897846760637225
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.7560112441400466
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6436245715045206
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.550346698362159
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1275
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1275
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 952
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1G3Q: 952 surface pts, 20 pos, min_adp_dist=3.78Å (frac=0.02)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [57/500] 1G3Q — ok, 952 surface pts (2.2s) | total ok=19
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2598
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.22472180764393
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.0932582279655136
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.4373031017077715
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.0117520714536004
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.6990735166359754
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.4911084698019983
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.3516581264525243
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.2462078529768226
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.1588173744926078
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.0823983439135525
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2014
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2014
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1491
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1G41: 1491 surface pts, 12 pos, min_adp_dist=4.71Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [58/500] 1G41 — ok, 1491 surface pts (4.0s) | total ok=20
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2012
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.517877672801325
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.441055362710773
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.779976839644835
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.3557515126895483
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.0918700353379793
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9064516236383173
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7597323434287118
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.630580082534219
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5186727494439967
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4230450858241062
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1468
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1468
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1109
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1G6H: 1109 surface pts, 51 pos, min_adp_dist=1.11Å (frac=0.05)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [59/500] 1G6H — ok, 1109 surface pts (2.8s) | total ok=21
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 5009
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.445806786033301
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.43661989032426
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.8040135149243244
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.379258250762481
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.0832783936761805
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.864761427781394
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7003067591897523
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.5717472655666334
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.4711459372332236
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.3851149474037423
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3201
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3196
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2304
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1G6O: 2304 surface pts, 18 pos, min_adp_dist=5.32Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [60/500] 1G6O — ok, 2304 surface pts (9.8s) | total ok=22
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 6056
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.954675316521196
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.9852895421891152
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.3678039812825675
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.943040151909743
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.6430141599719454
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.4195116239232517
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.2397570404425493
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.092120930848365
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.9719145373263787
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.8751492529169633
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3729
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3681
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2578
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1G99: 2578 surface pts, 77 pos, min_adp_dist=1.41Å (frac=0.03)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [61/500] 1G99 — ok, 2578 surface pts (13.1s) | total ok=23
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 3780
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.861935828032997
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.881160408479453
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.279484162903458
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.865154168559401
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.570053137546273
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.3490046651564653
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.1693586314608497
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.0213392925017994
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.9030503557258678
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.8093975419879282
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2339
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2332
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1690
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1GC5: 1690 surface pts, 0 pos, min_adp_dist=8.3Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1GC5: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=8.3Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [62/500] 1GC5 — skipped (no ADP or degenerate labels) (6.5s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2550
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.418979280970057
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.3227562801037998
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.645129408410123
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.189202436431813
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.8885751822408288
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.6737799365587984
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.515081628710717
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.3913108903212252
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.2976975787497922
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.2226845908764437
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1850
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1850
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1323
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1GKZ: 1323 surface pts, 0 pos, min_adp_dist=7.78Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1GKZ: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=7.78Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [63/500] 1GKZ — skipped (no ADP or degenerate labels) (4.0s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2707
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.440752597867924
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.3762451497586894
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.742115990492581
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.3204452141732337
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.0289498850814143
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.8130592107502805
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.6514260251932826
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.5284503346387808
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.4324445704184063
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.3503676202440802
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1920
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1913
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1371
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1GOJ: 1371 surface pts, 53 pos, min_adp_dist=1.29Å (frac=0.04)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [64/500] 1GOJ — ok, 1371 surface pts (4.2s) | total ok=24
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2479
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.62150801288584
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5494285968825974
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.890185483632905
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.462017162891741
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.154952090733547
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9423250099002054
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.795743785282568
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6956168486119687
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6242905902194997
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5648478494543014
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1746
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1746
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1274
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1GSA: 1274 surface pts, 0 pos, min_adp_dist=9.61Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1GSA: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=9.61Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [65/500] 1GSA — skipped (no ADP or degenerate labels) (3.6s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 6484
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.700594055927125
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.6262722983950693
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.952499931387594
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4983476083657266
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1776242194892492
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9451846430450048
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.766500326932707
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6239522933755361
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5076172172711257
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4115834861190812
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3843
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3810
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2824
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1GZF: 2824 surface pts, 69 pos, min_adp_dist=2.23Å (frac=0.02)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [66/500] 1GZF — ok, 2824 surface pts (14.6s) | total ok=25
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 9076
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.024148843828214
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.086718839860255
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.5007063231135795
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.096360095211535
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.7933789343822073
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.566816138899379
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.3989010846254155
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.2669897144806876
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.158228136208981
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.0695011329491644
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5028
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5027
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3581
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1H74: 3581 surface pts, 29 pos, min_adp_dist=2.63Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [67/500] 1H74 — ok, 3581 surface pts (23.9s) | total ok=26
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 24429
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.201839049963397
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.307760978838781
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.715882314808647
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.2954861262644246
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.991327832271446
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.762493783887577
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.5828209627206626
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.436920077955971
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.314842706895911
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.2137211321545127
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 10940
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 10590
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 7240
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1H8E: 7240 surface pts, 5 pos, min_adp_dist=4.73Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1H8E: degenerate labels (n_pos=5, frac=0.0, min_adp_dist=4.73Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [68/500] 1H8E — skipped (no ADP or degenerate labels) (177.3s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 1089
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.169137862020096
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 2.9466776907489587
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.2635484253067437
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 1.787451874591185
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.4382849550179746
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.1747428150487573
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 0.9785553396468112
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 0.8456261195636199
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 0.7514571449906755
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 0.6814950912515017
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 952
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 952
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 690
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HI5: 690 surface pts, 47 pos, min_adp_dist=1.84Å (frac=0.07)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [69/500] 1HI5 — ok, 690 surface pts (0.9s) | total ok=27
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2944
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.587955249302992
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5447715079201343
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.907948394266575
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.486745461030956
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.194052081160087
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9913199175919127
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.843479162628489
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.722503498616524
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6235708743029167
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.541428832436197
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1966
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1966
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1438
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HJO: 1438 surface pts, 7 pos, min_adp_dist=5.83Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1HJO: degenerate labels (n_pos=7, frac=0.0, min_adp_dist=5.83Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [70/500] 1HJO — skipped (no ADP or degenerate labels) (4.5s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2894
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.619960091312102
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.561790989012466
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.901536031803421
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4659466726562136
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.178989371782547
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9682644981821422
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.8106706216921074
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.693759370055388
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6048939718115305
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5343575919497259
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1940
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1940
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1430
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HPM: 1430 surface pts, 0 pos, min_adp_dist=6.77Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1HPM: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=6.77Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [71/500] 1HPM — skipped (no ADP or degenerate labels) (4.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 3790
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.588951809956831
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5194775163190744
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.86978615374817
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4294028883927834
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.11665778818665
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.892070091116253
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7352882294239467
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.623407045768494
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5314344463479763
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.448681312192727
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2794
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2794
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1960
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HTW: 1960 surface pts, 133 pos, min_adp_dist=0.28Å (frac=0.07)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [72/500] 1HTW — ok, 1960 surface pts (6.6s) | total ok=28
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 11565
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.3735167893519975
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.520269213677238
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.9624181856297236
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.5797957316928413
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.2965139080651937
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 3.081044450582916
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.913797733549943
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.7778866636725903
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.6634594238318927
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.5679224690751976
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5502
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5465
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3840
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HW8: 3840 surface pts, 100 pos, min_adp_dist=0.46Å (frac=0.03)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [73/500] 1HW8 — ok, 3840 surface pts (35.8s) | total ok=29
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 11750
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.323768095295254
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.486605679040771
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.9522743841756527
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.5791612659511984
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.3018135639676687
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 3.0902328389998948
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.9226715197604225
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.786232140670247
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.6711725097447268
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.571982477909977
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5593
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5570
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3989
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HW9: 3989 surface pts, 237 pos, min_adp_dist=0.22Å (frac=0.06)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [74/500] 1HW9 — ok, 3989 surface pts (36.9s) | total ok=30
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 11398
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.33575130043556
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.503194920890003
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.963398046387517
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.5871265640345027
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.307731461910767
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 3.091665707877633
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.919823696085723
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.780248126572622
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.665784423103466
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.5712769446419723
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5363
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5327
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3800
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HWI: 3800 surface pts, 130 pos, min_adp_dist=0.59Å (frac=0.03)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [75/500] 1HWI — ok, 3800 surface pts (34.8s) | total ok=31
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 11938
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.341056235834161
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.506769290112747
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.955136525844399
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.5706693463977652
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.2960933769555787
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 3.0910788508844047
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.9277843999125324
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.7938262087893864
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.6819185942553445
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.5858010837384584
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5716
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5670
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 4065
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HWJ: 4065 surface pts, 261 pos, min_adp_dist=0.46Å (frac=0.06)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [76/500] 1HWJ — ok, 4065 surface pts (38.5s) | total ok=32
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 11772
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.348105360950325
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.514532089594539
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.973370255812998
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.592841002317118
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.3193328727089626
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 3.1152504732312583
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.9501447547032242
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.810838767457663
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.6926592447715394
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.592969535711617
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5619
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5583
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3986
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HWK: 3986 surface pts, 232 pos, min_adp_dist=0.27Å (frac=0.06)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [77/500] 1HWK — ok, 3986 surface pts (37.3s) | total ok=33
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 11764
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.40234936281206
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.550365290554263
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.9980880805872494
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.612739690808068
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.331873845240402
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 3.113597635279372
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.9385118554584495
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.7986459537584927
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.6840935865406212
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.5870698798337495
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 5612
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 5579
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3938
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1HWL: 3938 surface pts, 141 pos, min_adp_dist=0.73Å (frac=0.04)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [78/500] 1HWL — ok, 3938 surface pts (36.9s) | total ok=34
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2845
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.313990024381964
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.1912788893261834
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.466612419096575
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.0144659501477236
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.7102987945096826
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.498651664671427
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.3377097955619135
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.210843787004236
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.1118165560395825
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.0271526586014996
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2136
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2136
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1593
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1I58: 1593 surface pts, 17 pos, min_adp_dist=2.97Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [79/500] 1I58 — ok, 1593 surface pts (4.5s) | total ok=35
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2858
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.2653865111463345
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.1704102903831988
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.481390501450393
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.020411123872703
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.7118669177199195
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.5065159884901167
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.3454083509819357
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.2157449199719
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.1170076875137598
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.040385147185614
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2128
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2128
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1542
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1I59: 1542 surface pts, 8 pos, min_adp_dist=4.51Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1I59: degenerate labels (n_pos=8, frac=0.01, min_adp_dist=4.51Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [80/500] 1I59 — skipped (no ADP or degenerate labels) (4.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2808
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.209900583892215
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.062268429867551
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.396022681222862
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 1.97411139789117
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.692020628055609
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.4873203848608183
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.3307394964277472
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.2128674550268252
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.1243354206000429
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.052756996820668
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2110
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2110
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1534
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1I5C: 1534 surface pts, 18 pos, min_adp_dist=5.3Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [81/500] 1I5C — ok, 1534 surface pts (4.4s) | total ok=36
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2596
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.572877182859497
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5225467973575664
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.886052706124909
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4682836347107067
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.184638282232325
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9840390954299079
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.8418220659980709
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.7383122066571601
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6528094218834684
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5780358090361624
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1795
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1795
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1346
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1I5S: 1346 surface pts, 35 pos, min_adp_dist=1.76Å (frac=0.03)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [82/500] 1I5S — ok, 1346 surface pts (3.9s) | total ok=37
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 4491
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.768772654976548
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.7356971571678073
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.0861469768018663
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.6362433593168575
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.3148480671037577
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.0790152083336584
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.9020523679101815
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.759545934444958
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6389837998183983
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5351025543602572
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3069
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3069
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2139
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IAH: 2139 surface pts, 28 pos, min_adp_dist=3.71Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [83/500] 1IAH — ok, 2139 surface pts (8.4s) | total ok=38
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 4122
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.600914305438942
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5725391008667935
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.9282234940513727
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4887360652779815
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1725057220890687
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9379269290068302
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7583483645413658
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6189488238354208
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5062347315881888
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.413879367640855
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2520
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2520
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1767
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IHU: 1767 surface pts, 0 pos, min_adp_dist=9.04Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1IHU: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=9.04Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [84/500] 1IHU — skipped (no ADP or degenerate labels) (7.3s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 8425
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.707638285163651
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.6982974863067155
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.0653127884535474
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.6284656992404973
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.3114832212715433
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.073270335172341
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.890620129843441
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.745038387691154
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6239940703729907
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.522997379675996
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 4948
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 4947
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 3476
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1II0: 3476 surface pts, 0 pos, min_adp_dist=9.02Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1II0: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=9.02Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [85/500] 1II0 — skipped (no ADP or degenerate labels) (21.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 5289
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.538615612199641
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.545960930648729
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.940701790566091
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.526958637096563
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.2386122050939687
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.030147154424714
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.8749860147874786
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.7522711639677606
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.653882976252704
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5777048029698806
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3258
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3258
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2363
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1II6: 2363 surface pts, 40 pos, min_adp_dist=3.57Å (frac=0.02)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [86/500] 1II6 — ok, 2363 surface pts (10.5s) | total ok=39
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2329
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.314536155860127
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.1771847907568356
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.52573583380354
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.1205110411700154
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.8340347389618934
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.625034188626721
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.46820454713482
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.3466153397874683
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.2556481680249671
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.1843328485424558
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1787
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1787
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1334
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IN4: 1334 surface pts, 8 pos, min_adp_dist=5.85Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1IN4: degenerate labels (n_pos=8, frac=0.01, min_adp_dist=5.85Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [87/500] 1IN4 — skipped (no ADP or degenerate labels) (3.3s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2354
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.37403904856095
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.2410061126379732
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.530764401499085
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.0816511452515583
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.780021800379
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.5754891368486343
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.4291721578750105
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.3115296899896633
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.2182896503478222
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.1441468190097566
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1816
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1816
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1356
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IN5: 1356 surface pts, 13 pos, min_adp_dist=5.19Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [88/500] 1IN5 — ok, 1356 surface pts (3.5s) | total ok=40
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2347
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.397885722780692
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.2775874484437924
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.5881169886803574
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.1359275226856944
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.835504413114622
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.6263721767580557
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.4680637148132936
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.342357936909959
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.244400325041396
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.163974957097818
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1805
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1805
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1325
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IN6: 1325 surface pts, 5 pos, min_adp_dist=5.85Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1IN6: degenerate labels (n_pos=5, frac=0.0, min_adp_dist=5.85Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [89/500] 1IN6 — skipped (no ADP or degenerate labels) (3.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2323
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.27654989061014
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.159784253570582
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.498160799988934
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.0650356493764797
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.765743967687058
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.5579433240248473
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.4156295007975406
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.308173378858052
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.2164626726333285
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.1449245208249215
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1798
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1798
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1304
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IN7: 1304 surface pts, 7 pos, min_adp_dist=5.9Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1IN7: degenerate labels (n_pos=7, frac=0.01, min_adp_dist=5.9Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [90/500] 1IN7 — skipped (no ADP or degenerate labels) (3.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2329
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.349449142222708
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.234801142015577
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.564856936875772
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.13562739766015
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 1.8285834783632766
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.6040873683475538
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.4477235309543877
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.3314837128518282
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.2314931912980236
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.1488539770887694
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1789
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1789
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1319
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IN8: 1319 surface pts, 8 pos, min_adp_dist=5.73Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1IN8: degenerate labels (n_pos=8, frac=0.01, min_adp_dist=5.73Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [91/500] 1IN8 — skipped (no ADP or degenerate labels) (3.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 1752
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.499370129699933
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.491026540701204
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.8568317754021564
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.415468348020178
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.114481388475607
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.906632270255137
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7393695350525786
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6110574302254135
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5004511498143134
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4000191856069804
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1263
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1263
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 926
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1ION: 926 surface pts, 23 pos, min_adp_dist=3.61Å (frac=0.02)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Info: [92/500] 1ION — ok, 926 surface pts (2.1s) | total ok=41
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:163
+┌ Debug: initial #samples 2305
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.6890306978613925
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.6295240168692464
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.970474440914227
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.529489620491378
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.215357823547958
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9866227558119813
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.823406100415255
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.686242424745535
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.5712893935841525
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4814633762364622
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1629
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1629
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1178
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IOV: 1178 surface pts, 0 pos, min_adp_dist=9.87Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1IOV: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=9.87Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [93/500] 1IOV — skipped (no ADP or degenerate labels) (3.3s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2304
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.509900398265122
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.500250126387779
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.8717828977726834
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.4588988247675436
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.1636529138108482
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.9371915574835168
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.767002280954475
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.6334921477626052
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.526209175701181
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4394546510828807
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1617
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1617
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1207
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1IOW: 1207 surface pts, 0 pos, min_adp_dist=9.81Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1IOW: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=9.81Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [94/500] 1IOW — skipped (no ADP or degenerate labels) (3.3s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 5737
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.682496135871132
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.6831725374774575
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.0537886728295454
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.6241012768741907
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.3222078224514604
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.0976567631842533
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.9269765526265583
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.7948785451254812
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.688392499268757
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.599432077375599
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 3688
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 3688
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 2585
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1J1C: 2585 surface pts, 0 pos, min_adp_dist=7.0Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1J1C: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=7.0Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [95/500] 1J1C — skipped (no ADP or degenerate labels) (12.3s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2867
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.621886903749249
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.5472834518513676
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 2.9139871441347927
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.487490051078053
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.187581738656408
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 1.956807636150306
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.7835734150028741
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.655315390958439
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.55530890786753
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.4748910046146801
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2009
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2009
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1463
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1J6Z: 1463 surface pts, 8 pos, min_adp_dist=5.5Å (frac=0.01)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1J6Z: degenerate labels (n_pos=8, frac=0.01, min_adp_dist=5.5Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [96/500] 1J6Z — skipped (no ADP or degenerate labels) (4.4s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 4340
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.765686158079167
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.7430938688769655
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.1218249334575905
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.687727362040561
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.385146198349142
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.1431307719213026
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.950111724205813
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.8043972899493432
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.6892563181685207
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.5992358259833046
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 2763
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 2752
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1954
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1J7L: 1954 surface pts, 2 pos, min_adp_dist=6.44Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1J7L: degenerate labels (n_pos=2, frac=0.0, min_adp_dist=6.44Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [97/500] 1J7L — skipped (no ADP or degenerate labels) (8.1s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 2835
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 4.826121745241798
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 3.823821748738421
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.1947021502866306
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 2.7713970119520326
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 2.4563975850511586
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.197608368229802
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 1.9998177752813602
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 1.846111013001103
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 1.7252344764731824
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 1.6287094735516014
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 1914
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137
+┌ Debug: #samples after trapped cull: 1914
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:145
+┌ Debug: #samples after subsampling: 1342
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:151
+┌ Info: 1JBP: 1342 surface pts, 0 pos, min_adp_dist=9.63Å (frac=0.0)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:256
+┌ Warning: Skipping 1JBP: degenerate labels (n_pos=0, frac=0.0, min_adp_dist=9.63Å)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:259
+┌ Info: [98/500] 1JBP — skipped (no ADP or degenerate labels) (4.3s)
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:159
+┌ Debug: initial #samples 44220
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:121
+┌ Debug: SDF loss iter 1: 5.3801099636905905
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 2: 4.485172276651898
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 3: 3.9111377760843027
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 4: 3.5087237858573683
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 5: 3.212126425620358
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 6: 2.986525417164026
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 7: 2.8059872609139243
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 8: 2.6600823838853427
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 9: 2.5408129901284275
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: SDF loss iter 10: 2.44263741531202
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:132
+┌ Debug: #samples after distance cull: 22127
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/src/data.jl:137

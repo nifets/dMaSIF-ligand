@@ -1,0 +1,77 @@
+┌ Info: Logging to /Users/2648894/Code/dMaSIF-ligand/logs/preprocess_20260222_214539.log
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:39
+┌ Info: Threads: 6 / 6 logical cores
+└ @ Main /Users/2648894/Code/dMaSIF-ligand/preprocess.jl:40
+┌ Debug: SSL connect: search.rcsb.org:443...
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:584
+┌ Debug: TCP connect: search.rcsb.org:443...
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:519
+┌ Debug: POST /rcsbsearch/v2/query HTTP/1.1
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:24
+┌ Debug: client startwrite
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:25
+┌ Debug: 👁  Start write:⏸    0s search.rcsb.org:443:53351 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:257
+┌ Debug: HTTP.Messages.Request:
+│ """
+│ POST /rcsbsearch/v2/query HTTP/1.1
+│ Content-Type: application/json
+│ Host: search.rcsb.org
+│ Accept: */*
+│ User-Agent: HTTP.jl/1.12.4
+│ Content-Length: 721
+│ Accept-Encoding: gzip
+│ 
+│ {"query":{"nodes":[{"parameters":{"negation":false,"operator":"in","value":["ADP"],"attribute":"rcsb_nonpolymer_entity_container_identifiers.comp_ids"},"service":"text","type":"terminal"},{"parameters":{"operator":"exact_match","value":"X-RAY DIFFRACTION","attribute":"exptl.method"},"service":"text","type":"terminal"},{"parameters":{"operator":"less_or_equal","value":2.5,"attribute":"rcsb_entry_info.resolution_combined"},"service":"text","type":"terminal"},{"parameters":{"operator":"less_or_equal","value":50000.0,"attribute":"rcsb_entry_info.molecular_weight"},"service":"text","type":"terminal"}],"type":"group","logical_operator":"and"},"return_type":"entry","request_options":{"paginate":{"start":0,"rows":500}}}"""
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:29
+┌ Debug: client startread
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:51
+┌ Debug: 👁  Start read: 🔗    0s search.rcsb.org:443:53351 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:281
+┌ Debug: client closewrite
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:46
+┌ Debug: 🗣  Write done: 🔗    0s search.rcsb.org:443:53351 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:269
+┌ Debug: called process()
+│   code = end
+│   input_size = 192
+│   output_size = 16384
+│   input_delta = 192
+│   output_delta = 226
+└ @ TranscodingStreams /Users/2648894/.julia/packages/TranscodingStreams/O3BYF/src/stream.jl:686
+┌ Debug: client closeread
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:60
+┌ Debug: ✉️  Read done: ⏸    0s search.rcsb.org:443:53351 RawFD(20)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:310
+┌ Debug: HTTP/1.1 400 Bad Request <= (POST /rcsbsearch/v2/query HTTP/1.1)
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:82
+┌ Debug: HTTP.Messages.Response:
+│ """
+│ HTTP/1.1 400 Bad Request
+│ vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+│ content-encoding: gzip
+│ content-type: application/json
+│ transfer-encoding: chunked
+│ date: Sun, 22 Feb 2026 21:45:41 GMT
+│ strict-transport-security: max-age=16000000; includeSubDomains; preload;
+│ alt-svc: h3=":443";ma=60;
+│ 
+│ """
+└ @ HTTP.StreamRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/StreamRequest.jl:83
+┌ Debug: ❗️  ConnectionLayer HTTP.Exceptions.StatusError(400, "POST", "/rcsbsearch/v2/query", HTTP.Messages.Response:
+│ """
+│ HTTP/1.1 400 Bad Request
+│ vary: origin,access-control-request-method,access-control-request-headers,accept-encoding
+│ content-encoding: gzip
+│ content-type: application/json
+│ transfer-encoding: chunked
+│ date: Sun, 22 Feb 2026 21:45:41 GMT
+│ strict-transport-security: max-age=16000000; includeSubDomains; preload;
+│ alt-svc: h3=":443";ma=60;
+│ 
+│ """). Closing: 🔁    0s search.rcsb.org:443:53351 RawFD(20)
+└ @ HTTP.ConnectionRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/ConnectionRequest.jl:137
+┌ Debug: 🚷  No Retry: POST /rcsbsearch/v2/query HTTP/1.1, HTTP 400: POST non-idempotent
+└ @ HTTP.RetryRequest /Users/2648894/.julia/packages/HTTP/ShTJs/src/clientlayers/RetryRequest.jl:70
+┌ Debug: 💀  Closed:     💀    5s search.rcsb.org:443:53351 RawFD(-1)
+└ @ HTTP.Connections /Users/2648894/.julia/packages/HTTP/ShTJs/src/Connections.jl:292
